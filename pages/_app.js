@@ -3,6 +3,7 @@ import { PageDataContextProvider } from "../src/contexts/pageData.context";
 import Nav from "../src/components/nav";
 import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { responsiveFontSizes } from "@material-ui/core/styles";
 import theme from "../src/theme";
 
 class MyApp extends App {
@@ -30,7 +31,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <Container>
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={responsiveFontSizes(theme)}>
           <CssBaseline />
           <Nav />
           <PageDataContextProvider>

@@ -1,6 +1,8 @@
+export const navLinks = ["journalist", "memorial", "friendship", "scholarship"];
+
 const mainData = {
   journalist: {
-    imgSrc: "../static/img/sahbu.jpg",
+    imgSrc: "/static/img/sahbu.jpg",
     title: "The Journalist",
     subTitle: "Pitter had a Nose for News",
     body: (
@@ -19,7 +21,7 @@ const mainData = {
     )
   },
   memorial: {
-    imgSrc: "../static/img/pat-family4.jpg",
+    imgSrc: "/static/img/pat-family4.jpg",
     title: "The Memorial",
     subTitle: "In Memory of a Brother and Son",
     body: (
@@ -36,6 +38,37 @@ const mainData = {
         and is a great to get to know Pat and his unique personality. Click the
         more info button to view a tribute Pat's brothers wrote.
       </>
+    )
+  },
+  friendship: {
+    imgSrc: "/static/img/pat-bb.jpg",
+    title: "The Friend",
+    subTitle: "Loyal and Dynamic Friend",
+    body: (
+      <>
+        The day I learned Pat had passed away, it didn’t really hit me until
+        later that night and I broke down in tears. I was humbled and honored
+        when Pats family asked me to speak at his
+        <a href="http://www.lindquistmortuary.com/notices/Patrick-Parkinson">
+          Celebration of Life
+        </a>
+        . Click the more info button to read the tribute I had written for my
+        life long friend.
+      </>
+    )
+  },
+  scholarship: {
+    imgSrc: "./static/img/pat-grad.jpg",
+    title: "The Scholarship",
+    subTitle: "WSU Scholarship for Journalism",
+    body: (
+      <p>
+        In memory of Patrick and his love for journalism his parents established
+        a scholarship for an outstanding student in journaism at Weber State
+        University where Pat graduated in 1998. You can donate to the
+        scholarship to help keep the memory of Pitter alive and helping young
+        journaists succeed.
+      </p>
     )
   }
 };

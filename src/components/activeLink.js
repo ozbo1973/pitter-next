@@ -4,12 +4,15 @@ import { useRouter } from "next/router";
 import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles(theme => ({
   root: {
-    marginRight: "10px",
-    color: theme.palette.linkPrimary.main
+    marginRight: theme.spacing(5),
+    color: theme.palette.linkPrimary.main,
+    "&:hover": {
+      textDecoration: "underline",
+      cursor: "pointer"
+    }
   },
   rootActive: {
-    marginRight: "10px",
-    color: theme.palette.linkPrimary.hover
+    color: theme.palette.linkPrimary.active
   }
 }));
 
@@ -23,12 +26,13 @@ const activeLink = ({ children, href }) => {
     router.push(href);
   };
 
-  const style = pathname === href ? classes.rootActive : classes.root;
+  const style =
+    pathname === href ? `${classes.root} ${classes.rootActive}` : classes.root;
 
   return (
-    <a href={href} onClick={handleClick} className={style}>
+    <span onClick={handleClick} className={style}>
       {children}
-    </a>
+    </span>
   );
 };
 

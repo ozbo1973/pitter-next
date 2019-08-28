@@ -16,12 +16,15 @@ const theme = createMuiTheme({
     background: {
       default: "#fff"
     },
+    headerPrimary: {
+      main: "#87f2eb"
+    },
     textPrimary: {
       main: "#636161"
     },
     linkPrimary: {
       main: "#fff",
-      hover: "#f2c476"
+      active: "#f2c476"
     },
     backgroundPrimary: {
       main: "#ccc"
