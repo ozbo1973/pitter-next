@@ -1,5 +1,5 @@
-import { Container, Paper, Grid, Typography } from "@material-ui/core";
 import useStyles from "../../static/style/pageLayout";
+import { Container, Paper, Grid, Typography } from "@material-ui/core";
 
 const pageLayout = ({ data }) => {
   const classes = useStyles();
@@ -16,12 +16,17 @@ const pageLayout = ({ data }) => {
               </div>
             </Grid>
             <Grid item xs={12} md={7} container spacing={3} direction="column">
-              <Grid item>
-                <Typography variant="h1" color="textPrimary" gutterBottom>
+              <Grid item className={classes.title}>
+                <Typography
+                  variant="h2"
+                  component="h1"
+                  color="textPrimary"
+                  gutterBottom
+                >
                   {title}
                 </Typography>
               </Grid>
-              <Grid item>
+              <Grid item className={classes.subTitle}>
                 <Typography variant="h4" color="primary">
                   {subTitle}
                 </Typography>

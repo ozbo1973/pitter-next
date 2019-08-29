@@ -7,28 +7,43 @@ export default makeStyles(theme => ({
     height: "100vh"
   },
   container: {
-    marginTop: "5rem",
+    marginTop: "1rem",
     padding: "1rem",
-    height: "90vh"
+    height: "90vh",
+    [theme.breakpoints.up("md")]: {
+      marginTop: "5rem"
+    }
   },
   img_container: {
     margin: "auto",
-    width: "75%",
-    height: "75%",
+    width: "50%",
+    height: "50%",
     borderRadius: "100%",
     border: `3px solid ${theme.palette.secondary.main}`,
-    overflow: "hidden"
+    overflow: "hidden",
+    [theme.breakpoints.up("md")]: {
+      width: "75%",
+      height: "75%"
+    }
   },
   img: {
     margin: "auto",
     width: "100%",
     height: "100%"
   },
+  title: {
+    margin: "auto",
+    [theme.breakpoints.up("md")]: {
+      margin: "0px"
+    }
+  },
+  subTitle: {
+    margin: "auto",
+    [theme.breakpoints.up("md")]: {
+      margin: "0px"
+    }
+  },
   paper: {
     padding: "1rem"
-  },
-  subPaper: {
-    height: "340px",
-    width: "140px"
   }
 }));
