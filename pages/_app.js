@@ -1,6 +1,5 @@
 import App, { Container } from "next/app";
 import { PageDataContextProvider } from "../src/contexts/pageData.context";
-import Nav from "../src/components/nav";
 import { ThemeProvider } from "@material-ui/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { responsiveFontSizes } from "@material-ui/core/styles";
@@ -33,7 +32,6 @@ class MyApp extends App {
       <Container>
         <ThemeProvider theme={responsiveFontSizes(theme)}>
           <CssBaseline />
-          <Nav />
           <PageDataContextProvider>
             <Component {...pageProps} />
           </PageDataContextProvider>

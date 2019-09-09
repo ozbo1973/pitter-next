@@ -1,50 +1,31 @@
-const Style = () => (
-  <style jsx="true">{`
-    .hero {
-      width: 100%;
-      color: #333;
+import { makeStyles } from "@material-ui/core/styles";
+export default makeStyles(theme => ({
+  root: {
+    flexGrow: 1
+  },
+  hero: {
+    height: "100vh",
+    background: 'top / 100% no-repeat url("/static/img/last-pat.jpg")'
+  },
+  titleContainer: {
+    width: "95%",
+    textAlign: "center",
+    marginTop: ".5rem",
+    boxShadow: `8px 5px 5px ${theme.palette.primary.main}`,
+    [theme.breakpoints.up("sm")]: {
+      backgroundColor: "rgba(239,242,249,0.3)",
+      borderRadius: "5px",
+      padding: "1rem"
     }
-    .title {
-      margin: 0;
-      width: 100%;
-      padding-top: 80px;
-      line-height: 1.15;
-      font-size: 48px;
+  },
+  mainTitle: {},
+  subTitle: {
+    textShadow: "1px 1px 2px yellow",
+    [theme.breakpoints.down("sm")]: {
+      display: "none"
     }
-    .title,
-    .description {
-      text-align: center;
-    }
-    .row {
-      max-width: 880px;
-      margin: 80px auto 40px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-    .card {
-      padding: 18px 18px 24px;
-      width: 220px;
-      text-align: left;
-      text-decoration: none;
-      color: #434343;
-      border: 1px solid #9b9b9b;
-    }
-    .card:hover {
-      border-color: #067df7;
-    }
-    .card h3 {
-      margin: 0;
-      color: #067df7;
-      font-size: 18px;
-    }
-    .card p {
-      margin: 0;
-      padding: 12px 0 0;
-      font-size: 13px;
-      color: #333;
-    }
-  `}</style>
-);
-
-export default Style;
+  },
+  menuContainer: {
+    padding: "8rem"
+  }
+}));

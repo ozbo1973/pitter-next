@@ -1,4 +1,5 @@
 import useStyles from "../../static/style/pageLayout";
+import Nav from "../components/nav";
 import { Container, Paper, Grid, Typography } from "@material-ui/core";
 
 const pageLayout = ({ data }) => {
@@ -7,6 +8,7 @@ const pageLayout = ({ data }) => {
 
   return (
     <div className={classes.root}>
+      <Nav />
       <Container className={classes.container}>
         <Grid container direction="column" spacing={3}>
           <Grid item container spacing={3} justify="center" alignItems="center">

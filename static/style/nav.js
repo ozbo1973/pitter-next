@@ -20,7 +20,10 @@ export default makeStyles(theme => ({
     textShadow: "1px 1px 2px white"
   },
   subTitle: {
-    paddingLeft: theme.spacing(5)
+    paddingLeft: theme.spacing(5),
+    [theme.breakpoints.down("xs")]: {
+      display: "none"
+    }
   },
   sectionDesk: {
     display: "none",
