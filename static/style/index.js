@@ -26,6 +26,10 @@ export default makeStyles(theme => ({
     }
   },
   menuContainer: {
-    padding: "8rem"
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex",
+      padding: "6rem 10rem"
+    }
   }
 }));

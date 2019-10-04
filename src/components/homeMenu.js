@@ -12,12 +12,12 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "30%",
+    width: "300px",
     backgroundColor: "rgba(244, 246, 249,0.5)",
     boxShadow: `8px 5px 5px ${theme.palette.primary.main}`
   },
   avatar: {
-    margin: 10,
+    // margin: 10,
     width: 60,
     height: 60
   },
@@ -33,11 +33,7 @@ const DisplayMenuItems = ({ menuItems }) => {
   const classes = useStyles();
 
   return menuKeys.map(m => (
-    <MenuItem
-      key={m}
-      onClick={() => router.push(`/${m}`)}
-      className={classes.menuItem}
-    >
+    <MenuItem key={m} onClick={() => router.push(`/${m}`)}>
       <Avatar
         alt={menuItems[m].subTitle}
         src={menuItems[m].imgSrc}
@@ -53,6 +49,7 @@ const DisplayMenuItems = ({ menuItems }) => {
 const HomeMenu = () => {
   const classes = useStyles();
   const { data } = useContext(PageDataContext);
+
   return (
     <Paper className={classes.root}>
       <MenuList>
